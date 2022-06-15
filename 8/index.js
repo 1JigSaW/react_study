@@ -1,12 +1,6 @@
-function Header() {
-    return (
-    <header>
-        <nav>
-            <img src="./react.png" width="40px"></img>
-        </nav>
-    </header>
-    )
-}
+import React from "react"
+import ReactDOM from "react-dom"
+import Header from "./Header"
 
 function MainContent() {
     return (
@@ -33,7 +27,7 @@ function Footer() {
 function Page() {
     return (
         <>
-        <Header />
+        
         <MainContent />
         <Footer />
         </>

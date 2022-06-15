@@ -1,8 +1,15 @@
+
+
 function Header() {
     return (
     <header>
-        <nav>
-            <img src="./react.png" width="40px"></img>
+        <nav className="nav">
+            <img src="./react.png" className="img_size"></img>
+            <ul className="nav-items">
+                <li>Pricing</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
         </nav>
     </header>
     )
