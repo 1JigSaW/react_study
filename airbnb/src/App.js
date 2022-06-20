@@ -8,7 +8,14 @@ export default function App() {
         <>
             <Header />
             <Main />
-            <Card />
+            <Card 
+                image="image1.png"
+                rating="5.0"
+                reviewCount={6}
+                country="England"
+                title="Life lessons with Katie Zaferes"
+                price={136}
+            />
         </>
     )
 }
