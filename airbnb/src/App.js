@@ -2,20 +2,26 @@ import React from "react";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Card from "./components/Card";
+import data from "./data";
 
 export default function App() {
+    const cards = data.map((card) => {
+        return <Card 
+            image={card.coverImg}
+            rating={card.stats.rating}
+            reviewCount={card.stats.reviewCount}
+            country={card.location}
+            title={card.title}
+            price={card.price}
+        />
+    })
     return (
         <>
             <Header />
             <Main />
-            <Card 
-                image="image1.png"
-                rating="5.0"
-                reviewCount={6}
-                country="England"
-                title="Life lessons with Katie Zaferes"
-                price={136}
-            />
+            <section className="cards-list">
+                {cards}
+            </section>
         </>
     )
 }
