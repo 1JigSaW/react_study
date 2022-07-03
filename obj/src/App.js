@@ -15,7 +15,12 @@ export default function App() {
      */
     
     function toggleFavorite() {
-        console.log("Toggle Favorite")
+        setContact(prevContact => {
+            return {
+                ...prevContact,
+                isFavorite: !prevContact.isFavorite
+            }
+        })
     }
     
     return (
@@ -24,15 +29,15 @@ export default function App() {
                 <img src="./images/user.png" className="card--image" />
                 <div className="card--info">
                     <img 
-                        src={`../images/star-empty.png`} 
+                        src={contact.isFavorite ? `../images/star-filled.png` :  `../images/star-empty.png`} 
                         className="card--favorite"
                         onClick={toggleFavorite}
                     />
                     <h2 className="card--name">
-                        John Doe
+                        {contact.firstName} {contact.lastName}
                     </h2>
-                    <p className="card--contact">+1 (719) 555-1212</p>
-                    <p className="card--contact">itsmyrealname@example.com</p>
+                    <p className="card--contact">{contact.phone}</p>
+                    <p className="card--contact">{contact.email}</p>
                 </div>
                 
             </article>

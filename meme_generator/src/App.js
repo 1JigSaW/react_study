@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "./components/Header";
-import Input from "./components/Inputs";
+import Meme from "./components/Inputs";
 
 export default function App() {
   return (
     <>
       <Header />
-      <Input />
+      <Meme />
     </>
   );
 }
